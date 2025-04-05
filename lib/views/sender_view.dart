@@ -46,7 +46,7 @@ class SenderView extends StatelessWidget {
               CheckboxListTile(
                 value: vm.sendEmail,
                 onChanged: (val) => vm.setSendEmail(val ?? false),
-                title: const Text("Send Email Notification"),
+                title: const Text("Share Task through other apps"),
                 controlAffinity: ListTileControlAffinity.leading,
               ),
               vm.isLoading

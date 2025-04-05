@@ -137,25 +137,31 @@ class ReceiverView extends StatelessWidget {
                               const SizedBox(height: 8),
                               Row(
                                 children: [
-                                  ElevatedButton.icon(
-                                    icon: const Icon(Icons.check),
-                                    label: const Text("Accept"),
-                                    style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
-                                    onPressed: accepted == null ? () => vm.updateTaskStatus(doc.id, true, context) : null,
+                                  Expanded(
+                                    child: ElevatedButton.icon(
+                                      icon: const Icon(Icons.check),
+                                      label: const Text("Accept"),
+                                      style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+                                      onPressed: accepted == null ? () => vm.updateTaskStatus(doc.id, true, context) : null,
+                                    ),
                                   ),
-                                  const SizedBox(width: 10),
-                                  ElevatedButton.icon(
-                                    icon: const Icon(Icons.close),
-                                    label: const Text("Reject"),
-                                    style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
-                                    onPressed: accepted == null ? () => vm.updateTaskStatus(doc.id, false, context) : null,
+                                  const SizedBox(width: 8),
+                                  Expanded(
+                                    child: ElevatedButton.icon(
+                                      icon: const Icon(Icons.close),
+                                      label: const Text("Reject"),
+                                      style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                                      onPressed: accepted == null ? () => vm.updateTaskStatus(doc.id, false, context) : null,
+                                    ),
                                   ),
-                                  const SizedBox(width: 10),
-                                  ElevatedButton.icon(
-                                    icon: const Icon(Icons.save),
-                                    label: const Text("Update Desc"),
-                                    style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
-                                    onPressed: () => vm.updateTaskDescription(doc.id, descriptionController.text, context),
+                                  const SizedBox(width: 8),
+                                  Expanded(
+                                    child: ElevatedButton.icon(
+                                      icon: const Icon(Icons.save),
+                                      label: const Text("Update Desc"),
+                                      style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
+                                      onPressed: () => vm.updateTaskDescription(doc.id, descriptionController.text, context),
+                                    ),
                                   ),
                                 ],
                               )
