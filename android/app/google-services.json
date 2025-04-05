@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "922697138135",
+    "project_id": "rapidd-technologies-demo",
+    "storage_bucket": "rapidd-technologies-demo.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:922697138135:android:bb7cbd2822ae6f54bf9592",
+        "android_client_info": {
+          "package_name": "com.example.rapidd_technologies_demo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBYrDRaED5u2K4sphsa8Zqx3MBEhuxTlg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
