@@ -114,10 +114,25 @@ class SenderView extends StatelessWidget {
                       }
 
                       return Card(
-                        child: ListTile(
-                          title: Text(task['title'] ?? 'No Title'),
-                          subtitle: Text(task['description'] ?? 'No Description'),
-                          trailing: statusIcon,
+                        elevation: 2,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                        margin: const EdgeInsets.symmetric(vertical: 8),
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('Title:', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                              Text(task['title'] ?? 'No Title'),
+                              const SizedBox(height: 6),
+                              const Text('Description:', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                              Text(task['description'] ?? 'No Description'),
+                              const SizedBox(height: 6),
+                              Text('To: ${task['receiver'] ?? 'N/A'}', style: const TextStyle(color: Colors.grey, fontSize: 12)),
+                              const SizedBox(height: 8),
+                              Align(alignment: Alignment.centerRight, child: statusIcon),
+                            ],
+                          ),
                         ),
                       );
                     },
