@@ -10,7 +10,7 @@ class SenderViewModel with ChangeNotifier {
   final TextEditingController descriptionController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final formKey = GlobalKey<FormState>();
-  String senderEmail = 'sender@email.com'; // Replace with actual sender info if needed
+  String senderEmail = 'sender@email.com';
   bool isLoading = false;
 
   bool sendEmail = false;
